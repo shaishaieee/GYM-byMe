@@ -1,0 +1,320 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+@use "../component/" as *;
+@use "../layout/" as *;
+@use "../vendor/" as *;
+
+
+.banner{
+    background-color: $clr-light;
+    border-radius: 0 0 7rem 7rem;
+    h6{
+        padding-top: 3rem;
+        opacity: 0.5;
+        letter-spacing: 0.5rem;
+        color: $clr-dark;
+        @include mediaQuery{
+            letter-spacing: 0.1rem;
+        }
+      
+    }
+    h1{
+        letter-spacing: 0.5rem;
+        color: $clr-dark;
+        @include mediaQuery{
+            letter-spacing: 0;
+            line-height: 5rem;
+        }
+
+    }
+    &__top{
+        @include unevenGrid(2fr 1fr, 5rem);
+        @include mediaQuery{
+            @include mediaQuery{
+                @include grid(1);
+            }
+        }
+        }
+
+    &__right{
+        align-self: flex-end;
+        transform: translate(20rem, -5rem);
+    }
+
+    &__one{
+        background-color: $clr-neonorange;
+        color: $clr-light;
+        border-radius: 2rem;
+        padding: 1rem 2.5rem;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+
+        @include mediaQuery{
+            margin-top: 5rem;
+        }
+
+    }
+    &__two{
+        background-color: transparent;
+        color: $clr-dark;
+        border-radius: 2rem;
+        padding: 1rem 2.5rem;
+        font-size: 1.5rem;
+        outline: 1px solid $clr-neonorange;
+        @include mediaQuery{
+            margin-top: 1rem;
+        }
+
+
+    }
+
+    &__images{
+        @include unevenGrid(2fr 3fr, 10rem);
+        padding-bottom: 6rem;
+        @include mediaQuery{
+            @include unevenGrid(1fr)
+        }
+
+        &__left{
+            img{
+                width: 100%;
+                border-radius: 2rem;
+            }
+        }
+        &__right{
+            img{
+                width: 100%;
+                border-radius: 2rem;
+            }
+        }
+
+       
+        p{
+            text-align: justify;
+            padding-top: 3rem;
+            color: $clr-dark;
+        }
+    }
+}
+
+.ratings{
+    background-color: $clr-primary;
+    border-radius: 15rem;
+        margin-top: 3rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        padding: 2rem 20rem;
+    &__wrapper{
+        @include grid(4);
+        @include mediaQuery{
+            @include grid(1);
+
+        }
+        &__rate{
+
+            h3,h5,p{
+                text-align: left;
+                color: $clr-light;
+            }
+        }
+    }
+}
+
+.info{
+    padding-top: 15rem;
+    padding-bottom: 4rem;
+    h2,p{
+        color: $clr-light;
+        text-align: center;
+    }
+    
+}
+
+.reasons{
+    background-color: $clr-primary;
+    border-radius: 3rem;
+    margin: 0 2rem;
+    &__wrapper{
+        @include unevenGrid(3fr 1fr, 5rem);
+    }
+    &__left{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+       @include flex;
+        max-width: 90rem;
+        gap: 10rem;
+    }
+    &__content{
+        @include flex;
+        i{
+           padding: 1rem;
+            background-color: $clr-neonorange;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            margin-top: 1.5rem;
+        }
+        h3{
+            padding: 0.5rem 0;
+        }
+
+    }
+    &__right{
+        position: relative;
+        img{
+            position: absolute;
+            left: 56%;
+            height: 42.5rem;
+            width: 200rem;
+           border-radius: 0 3rem 3rem 0;
+        }
+    }
+}
+
+.trainers{
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+  
+    h2, p{
+        text-align: center;
+    }
+    &__profile{
+        padding-top: 8rem;
+        @include grid(3);
+        justify-items: center;
+        @include mediaQuery{
+            @include grid(1);
+        }
+    }
+    .img__profile{
+        position: relative;
+        img{
+            border-radius: 3rem;
+            @include mediaQuery{
+                padding-bottom: 1rem;
+            }
+        }
+
+        h4{
+            position: absolute;
+            top: 89%;
+            left: 22%;
+            transform: translateX(-50);
+            color: $clr-dark;
+        }
+    }
+}
+
+.message{
+    margin: 0 2rem;
+    background-color: $clr-primary;
+    border-radius: 3rem;
+    padding: 5rem 0;
+    &__wrapper{
+        @include unevenGrid(2fr 4fr, 3rem);
+        @include unevenGrid(1fr);
+    }
+
+    &__left{
+        h6{
+            letter-spacing: 0.3rem;
+        }
+        h3{
+            padding-bottom: 5rem;
+        }
+        i{
+            background-color: $clr-neonorange;
+            color: $clr-light;
+            padding: 1rem;
+            border-radius: 50%;
+            margin: 1rem;
+        }
+    }
+    &__right{
+        margin-left: 5rem;
+        @include mediaQuery{
+            margin-left: 0;
+        }
+        &__info{
+            @include flex;
+            gap: 4rem;
+            i{
+                font-size: 6rem;
+                color: $clr-light; 
+                opacity: 0.5;
+                @include mediaQuery{
+                    font-size: 3rem;
+                }
+            }
+            p{
+                padding-top: 2rem;
+                @include mediaQuery{
+                    padding: 0;
+                }
+            }
+        }
+        &__image{
+            padding-top: 3rem;
+            @include flex;
+            gap: 2rem;
+            margin-left: 10rem;
+            @include mediaQuery{
+                margin-left: 0;
+            }
+            img{
+                border-radius: 50%;
+            }
+            &__name{
+                align-self: center;
+            }
+
+        }
+        
+    }
+   
+}
+
+.cta{
+    margin-top: 15rem;
+    padding: 10rem 0;
+    background-image: url(https://via.placeholder.com/500x300);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    &__wrapper{
+        h2, p{
+            text-align: center;
+            font-weight: bolder;
+            color: $clr-dark;
+        }
+        
+    }
+
+    &__button{
+        position: relative;
+        button{
+            position: absolute;
+            bottom: 90%;
+            left: 45%;
+            transform: translateY(5rem);
+            margin-top: 5rem;
+            background-color: $clr-neonorange;
+            color: $clr-light;
+            border-radius: 2rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.5rem;
+            justify-self: center;
+
+            @include mediaQuery{
+            position: absolute;
+            bottom: 90%;
+            left: 30%;
+            transform: translateY(5rem);
+            }
+        }
+    }
+}
+
+    

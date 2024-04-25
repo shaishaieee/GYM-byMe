@@ -1,0 +1,22 @@
+:root{
+    --light : #fff;
+    --darkblue : #171F2F;
+    --lightblue : #202837;
+    --neonyellow : #d7fb00;
+    --dark : #000;
+    --neonorange : #FF7600;
+}
+$clr-primary: #232323;
+$clr-secondary: #1f1f1f;
+$clr-light:var(--light);
+$clr-darkblue:var(--darkblue);
+$clr-lightblue:var(--lightblue);
+$clr-neonyellow:var(--neonyellow);
+$clr-dark: var(--dark);
+$clr-neonorange: var(--neonorange);
+
+
+$sm: "42rem";
+$md: "92rem";
+$lg: "144rem";
+$xl: "180rem";

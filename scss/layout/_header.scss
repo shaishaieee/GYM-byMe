@@ -1,0 +1,75 @@
+@use "../abstract/" as *;
+.header{
+    background-color: $clr-light;
+    border-radius: 7rem 7rem 0 0;
+    .logo{
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+    &__wrapper{
+        padding: 3rem 0;
+        margin-bottom: 1rem;
+        @include unevenGrid(1fr 2fr 1fr);
+        @include mediaQuery{
+            @include unevenGrid(30rem 30rem);
+           
+        }
+    }
+    &__signup{
+        
+            font-size: 2rem;
+            border: none;
+            background: transparent;
+            font-family: "clashdisplay-regular";
+            font-size: 1.5rem;
+            background-color: $clr-neonorange;
+            border-radius: 2.5rem;
+            padding: 1rem 2.5rem;
+            color: $clr-light;
+            margin-right: 2rem;
+
+    }
+    ul {
+        position: static;
+        background-color: unset;
+        padding: unset;
+        width: auto;
+        height: unset;
+        flex-direction: row;
+        visibility: visible;
+        opacity: 1;
+        @include mediaQuery{
+            visibility: hidden;
+        }
+
+        li {
+            a {
+            font-size: 2rem;
+            &:hover{
+                color: $clr-primary;
+                font-weight: 700;
+                border-bottom: 3px solid $clr-neonorange;
+                transition: 0.5s ease;
+            }
+            
+            }
+            }
+            li{
+                text-align: center;
+            }
+
+            a{  
+                font-size: 2.5rem;
+            }
+        }
+
+    i{
+        visibility: hidden;
+        @include mediaQuery{
+            visibility: visible;
+        }
+    }
+   
+    }
+    
+   
